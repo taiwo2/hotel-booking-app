@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const Navbar = () => {
   const { user} = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
   return (
     <div className="navbar">
       <div className="navContainer">

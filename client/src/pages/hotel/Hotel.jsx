@@ -46,11 +46,11 @@ const [openModal, setOpenModal] = useState(false)
 
   const id = location.pathname.split("/")[2];
   
-  const {data, loading, error} = useFetch(`/hotels/find/${id}`)
+  const {data, loading} = useFetch(`/hotels/find/${id}`)
   // console.log(data)
   const {dates,options} = useContext(SearchContext)
   const {user} = useContext(AuthContext)
-console.log(dates)
+// console.log(dates)
 
   const MILI_SECONDS_PER_DAY = 1000 * 60 * 60 * 24;
   const daysDifference = (date1, date2) => {

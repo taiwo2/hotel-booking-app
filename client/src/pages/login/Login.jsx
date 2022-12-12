@@ -11,12 +11,12 @@ const Login = () => {
   })
 
     const navigate = useNavigate()
-  const {dispatch, user,loading,error} = useContext(AuthContext);
+  const {dispatch,loading,error} = useContext(AuthContext);
 
   const handleChange = (e) => {
     setCredential((prev) => ({...prev,[e.target.name]: e.target.value}))
   }
-// console.log((error))
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({type: "LOGIN_START"})

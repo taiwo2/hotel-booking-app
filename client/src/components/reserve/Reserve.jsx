@@ -11,10 +11,10 @@ import { SearchContext } from "../context/SearchContext";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`/hotels/rooms/${hotelId}`);
+  const { data} = useFetch(`/hotels/rooms/${hotelId}`);
   const { dates } = useContext(SearchContext);
-  console.log(data)
-
+  // console.log('ww',data)
+  // console.log(hotelId)
   const getDatesInRange = (startDate, endDate) => {
     const start = new Date(startDate);
     const end = new Date(endDate);
@@ -65,7 +65,7 @@ const Reserve = ({ setOpen, hotelId }) => {
       );
       setOpen(false);
       console.log(false)
-      // navigate("/");
+      navigate("/");
     } catch (err) {}
   };
   return (
